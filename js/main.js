@@ -78,17 +78,20 @@ workTabs.addEventListener("click", (event) => {
 workTabs.addEventListener("click", filterImg);
 
 function filterImg(event) {
-  imagesItems.forEach((item) => {
-    item.style.display = "block";
 
-    if (event.target.getAttribute('data-content') !== item.getAttribute('data-content')) {
-      item.style.display = "none";
-    }
-
-    if (event.target.getAttribute('data-content') === "All") {
+  if (event.target.tagName === "LI") {
+    imagesItems.forEach((item) => {
       item.style.display = "block";
-    }
-  })
+  
+      if (event.target.getAttribute('data-content') !== item.getAttribute('data-content')) {
+        item.style.display = "none";
+      }
+  
+      if (event.target.getAttribute('data-content') === "All") {
+        item.style.display = "block";
+      }
+    })
+  }
 }
 
 workImages.forEach(element => {
