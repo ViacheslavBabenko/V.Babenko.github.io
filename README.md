@@ -1,4 +1,4 @@
-# V.Babenko.github.io
+# https://viacheslavbabenko.github.io/V.Babenko.github.io/
 
 
 This is my first self-made project while taking Js Frontend Developer courses.
